@@ -26,13 +26,15 @@ export class KnexStorageEngine {
     txid, 
     vout, 
     amount,
-    ownerKey
+    ownerKey,
+    assetId
   }) {
     await this.knex(`${this.tablePrefix}tokens`).insert({
       txid,
       vout,
       amount,
-      ownerKey
+      ownerKey,
+      assetId
     })
   }
 
