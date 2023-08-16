@@ -1,0 +1,17 @@
+node_modules
+data/confederacy-mysql-data
+data/database.sqlite
+.env
+.DS_Store
+# docker-compose.yml
+dispatch.yaml
+yarn-error.log
+yarn.lock
+# public/index.html
+app.production.yaml
+app.staging.yaml
+out
+/data/
+tsconfig.tsbuildinfo
+*.tgz
+test/data/tmp/
