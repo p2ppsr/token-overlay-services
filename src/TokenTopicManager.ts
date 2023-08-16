@@ -27,7 +27,7 @@ export class TokenTopicManager implements TopicManager {
       const maxNumberOfEachAsset = {}
       for (const p of previousUTXOs) {
         const decoded = pushdrop.decode({
-          script: p.outputScript,
+          script: typeof p.outputScript === 'string' ? p.outputScript : p.outputScript.toString('hex'),
           fieldFormat: 'utf8'
         })
         let assetId
@@ -57,7 +57,7 @@ export class TokenTopicManager implements TopicManager {
         try {
           const o = parsedTransaction.outputs[i]
           const decoded = pushdrop.decode({
-            script: o.script,
+            script: o.script.toHex(),
             fieldFormat: 'utf8'
           })
           const assetId = decoded.fields[0]
@@ -86,7 +86,7 @@ export class TokenTopicManager implements TopicManager {
 
       for (const p of previousUTXOs) {
         const decodedPrevious = pushdrop.decode({
-          script: p.outputScript,
+          script: typeof p.outputScript === 'string' ? p.outputScript : p.outputScript.toString('hex'),
           fieldFormat: 'utf8'
         })
         let assetId
@@ -101,7 +101,7 @@ export class TokenTopicManager implements TopicManager {
             return false
           }
           const decodedCurrent = pushdrop.decode({
-            script: x.script,
+            script: x.script.toHex(),
             fieldFormat: 'utf8'
           })
           return decodedCurrent.fields[0] === assetId
