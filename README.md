@@ -8,63 +8,30 @@ Topic Manager and Lookup Service for token overlays
 
 #### Table of Contents
 
-*   [ProtoMapLookupService](#protomaplookupservice)
+*   [TokenLookupService](#tokenlookupservice)
     *   [Parameters](#parameters)
-    *   [outputAdded](#outputadded)
-        *   [Parameters](#parameters-1)
-    *   [outputSpent](#outputspent)
-        *   [Parameters](#parameters-2)
-    *   [lookup](#lookup)
-        *   [Parameters](#parameters-3)
-*   [ProtoMapTopicManager](#protomaptopicmanager)
+*   [TokenTopicManager](#tokentopicmanager)
     *   [identifyAdmissibleOutputs](#identifyadmissibleoutputs)
-        *   [Parameters](#parameters-4)
+        *   [Parameters](#parameters-1)
 
-### ProtoMapLookupService
+### TokenLookupService
 
-Implements a lookup service for ProtoMap name registry
+Implements a lookup service for tokens
 
 #### Parameters
 
-*   `storageEngine` &#x20;
+*   `$0` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**&#x20;
 
-#### outputAdded
+    *   `$0.storageEngine` &#x20;
+    *   `$0.topics`   (optional, default `[]`)
 
-Notifies the lookup service of a new output added.
+### TokenTopicManager
 
-##### Parameters
-
-*   `params` **{txid: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), vout: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), outputScript: any, topic: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}**&#x20;
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<void>**&#x20;
-
-#### outputSpent
-
-Deletes the output record once the UTXO has been spent
-
-##### Parameters
-
-*   `params` **{txid: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), vout: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), topic: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}**&#x20;
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<void>**&#x20;
-
-#### lookup
-
-Queries the lookup service for particular UTXOs
-
-##### Parameters
-
-*   `params` **{query: ProtoMapLookupQuery}**&#x20;
-
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<LookupResult>>**&#x20;
-
-### ProtoMapTopicManager
-
-Implements a topic manager for ProtoMap name registry
+Implements a topic manager for token management
 
 #### identifyAdmissibleOutputs
 
-Returns the outputs from the ProtoMap transaction that are admissible.
+Returns the outputs from the transaction that are admissible.
 
 ##### Parameters
 
