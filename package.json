@@ -38,7 +38,7 @@
     "confederacy-base": "^0.1.2",
     "cwi-base": "^0.3.108",
     "mongodb": "^5.7.0",
-    "pushdrop": "^0.1.33",
+    "pushdrop": "^0.1.34",
     "sendover": "^1.2.7"
   }
 }
