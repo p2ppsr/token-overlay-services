@@ -39,6 +39,6 @@
     "cwi-base": "^0.3.116",
     "mongodb": "^5.7.0",
     "pushdrop": "^0.1.37",
-    "sendover": "^1.2.13"
+    "sendover": "^1.2.16"
   }
 }
