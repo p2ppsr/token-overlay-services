@@ -36,9 +36,9 @@
   "dependencies": {
     "babbage-bsv": "^0.2.4",
     "confederacy-base": "^0.1.2",
-    "cwi-base": "^0.3.117",
+    "cwi-base": "^0.3.118",
     "mongodb": "^5.7.0",
     "pushdrop": "^0.1.37",
-    "sendover": "^1.2.17"
+    "sendover": "^1.2.18"
   }
 }
