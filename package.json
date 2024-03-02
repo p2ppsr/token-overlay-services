@@ -1,6 +1,6 @@
 {
   "name": "token-overlay-services",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Topic Manager and Lookup Service for token overlays",
   "main": "./out/src/index.js",
   "types": "./out/src/index.d.ts",
